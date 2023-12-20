@@ -19,7 +19,9 @@ list.of.packages <- c("tidyverse","ggpubr","data.table","vegan",
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
 
-library(list.of.packages)
+lapply(list.of.packages, require, character.only = TRUE)
+
+rm(list.of.packages, new.packages)
 
 # Load data ---------------------------------------------------------------
 
