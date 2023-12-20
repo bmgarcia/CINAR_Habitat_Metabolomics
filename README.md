@@ -6,7 +6,7 @@ Brianna M. Garcia, Cynthia C. Becker , Laura Weber, Gretchen J. Swarr, Melissa C
 Department of Marine Chemistry and Geochemistry, Woods Hole Oceanographic Institution, Woods Hole, MA, United States
 
 
-All necessary code and files to regenerate figures in the manuscript are provided in this GitHub repository, excluding map data (see below).
+All necessary [code](https://github.com/bmgarcia/CINAR_Habitat_Metabolomics/blob/main/R_Script_CINAR_Manuscript_forGitHub.R) and [files](https://github.com/bmgarcia/CINAR_Habitat_Metabolomics/tree/main/Files) to regenerate [figures](https://github.com/bmgarcia/CINAR_Habitat_Metabolomics/tree/main/Figures) in the manuscript are provided in this GitHub repository, excluding map data (see below).
 
 Necessary data to regenerate Figure 1 (Site Map) can be downloaded from the following sources and is not included in this GitHub repository due to size.
 
