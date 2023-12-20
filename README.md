@@ -10,10 +10,9 @@ All necessary code and files to regenerate figures in the manuscript are provide
 
 Necessary data to regenerate Figure 1 (Site Map) can be downloaded from the following sources and is not included in this GitHub repository due to size.
 
-* US National Parks <https://public-nps.opendata.arcgis.com/datasets/nps::nps-land-resources-division-boundary-and-tract-data-service/explore?layer=2&location=0.239390%2C-12.497900%2C2.00>
-* US Virgin Islands and Puerto Rico Habitats <https://products.coastalscience.noaa.gov/collections/benthic/e95usvi_pr/>
-* United States and Territories <https://earthworks.stanford.edu/catalog/stanford-vt021tk4894> 
-
+* [US National Parks](https://public-nps.opendata.arcgis.com/datasets/nps::nps-land-resources-division-boundary-and-tract-data-service/explore?layer=2&location=0.239390%2C-12.497900%2C2.00)
+* [US Virgin Islands and Puerto Rico Habitats](https://products.coastalscience.noaa.gov/collections/benthic/e95usvi_pr/)
+* [United States and Territories](https://earthworks.stanford.edu/catalog/stanford-vt021tk4894)
 
 Metadata can be found at the following MetaboLights deposition: https://www.ebi.ac.uk/metabolights/ MTBLS9008)
 
