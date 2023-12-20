@@ -1,0 +1,6 @@
+Site	Site_abbrv	Lat	Lon
+Ditliff	DL	18.31306	-64.76397
+Cocoloba	CO	18.31506	-64.76096
+Joels Shoal	JS	18.31324	-64.75744
+Yawzi	YZ	18.31436	-64.72591
+Tektite	TK	18.308786	-64.723275
