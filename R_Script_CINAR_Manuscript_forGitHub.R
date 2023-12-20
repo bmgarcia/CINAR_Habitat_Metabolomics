@@ -201,6 +201,10 @@ rm(kw, kw_results,pwrst,pwrst_results)
 # Figure 1. St.John,USVI Map ----------------------------------------------
 
 # Raw shapefiles
+#US National Parks <https://public-nps.opendata.arcgis.com/datasets/nps::nps-land-resources-division-boundary-and-tract-data-service/explore?layer=2&location=0.239390%2C-12.497900%2C2.00>
+#US Virgin Islands and Puerto Rico Habitats <https://products.coastalscience.noaa.gov/collections/benthic/e95usvi_pr/>
+#United States and Territories <https://earthworks.stanford.edu/catalog/stanford-vt021tk4894> 
+  
 usa <- st_read("site_map/stanford-vt021tk4894-shapefile/","vt021tk4894")
 sttstj <- st_read("site_map/stsj_fin")
 nps <- st_read("site_map/NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service")
