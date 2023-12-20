@@ -1,6 +1,6 @@
 # Set Working Directory ---------------------------------------------------
 
-setwd("")
+setwd("/Users/bmgarcia/Downloads")
 getwd()
 
 # Set color palette ----------------------------------------------
@@ -43,12 +43,12 @@ library(UpSetR)
 
 # Load data ---------------------------------------------------------------
 
-data <- read_csv("CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINARhabitat_Quant_table.csv")
+data <- read_csv("./CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINARhabitat_Quant_table.csv")
 data <- as_tibble(data,rownames="rowID_full")
 data$rep_group<-as.factor(data$rep_group)
-seq <- read_csv("CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINAThabitat_Seq_Sheet.csv")
-limits <- read_csv("CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINARhabitat_LODLOQ_limits.csv")
-benthic <- read.delim("CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINARhabitat_Benthic_cover.txt", sep = "\t", header = TRUE)
+seq <- read_csv("./CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINAThabitat_Seq_Sheet.csv")
+limits <- read_csv("./CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINARhabitat_LODLOQ_limits.csv")
+benthic <- read.delim("./CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINARhabitat_Benthic_cover.txt", sep = "\t", header = TRUE)
 
 # Merge in file name ------------------------------------------------------
 
@@ -156,7 +156,7 @@ fivereefs_long <- fivereefs%>%
 
 metadata.mat <- habitat[,13:18]
 
-set.seed(1)
+set.seed(100)
 kw <- apply(metadata.mat,2,kruskal.test, g = habitat$Site_abv)
 
 kw
@@ -164,7 +164,7 @@ kw
 kw_results<- rbindlist(kw,idcol="metadata")%>%
   mutate(sig=p.value <= 0.05)
 
-set.seed(1)
+set.seed(100)
 pwrst <- apply(metadata.mat,2,pairwise.wilcox.test, g = habitat$Site_abv, p.adjust.method="BH",paired= FALSE)
 
 pwrst
@@ -179,7 +179,7 @@ rm(kw, kw_results,pwrst,pwrst_results)
 
 metadata.mat <- habitat[,13:18]
 
-set.seed(1)
+set.seed(100)
 kw <- apply(metadata.mat,2,kruskal.test, g = habitat$bay_group)
 
 kw
@@ -187,7 +187,7 @@ kw
 kw_results<- rbindlist(kw,idcol="metadata")%>%
   mutate(sig=p.value <= 0.05)
 
-set.seed(1)
+set.seed(100)
 pwrst <- apply(metadata.mat,2,pairwise.wilcox.test, g = habitat$bay_group, p.adjust.method="BH",paired= FALSE)
 
 pwrst
@@ -201,17 +201,20 @@ rm(kw, kw_results,pwrst,pwrst_results)
 # Figure 1. St.John,USVI Map ----------------------------------------------
 
 # Raw shapefiles
+
+#these file is not included on GitHub due to size, please download from above source link, coordinates can be found on GitHub
+
 #US National Parks <https://public-nps.opendata.arcgis.com/datasets/nps::nps-land-resources-division-boundary-and-tract-data-service/explore?layer=2&location=0.239390%2C-12.497900%2C2.00>
 #US Virgin Islands and Puerto Rico Habitats <https://products.coastalscience.noaa.gov/collections/benthic/e95usvi_pr/>
 #United States and Territories <https://earthworks.stanford.edu/catalog/stanford-vt021tk4894> 
   
-usa <- st_read("CINAR_Habitat_Metabolomics-main/Files/site_map/stanford-vt021tk4894-shapefile/","vt021tk4894")
-sttstj <- st_read("CINAR_Habitat_Metabolomics-main/Files/site_map/stsj_fin")
-nps <- st_read("CINAR_Habitat_Metabolomics-main/Files/site_map/NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service")
+usa <- st_read("/Volumes/KujLab/Brianna/Projects/2022_0328_CINAR_BC/BC_Coral_Exometabolomics_Manuscript_EST/data_availability/GitHub/site_map/stanford-vt021tk4894-shapefile/","vt021tk4894")
+sttstj <- st_read("/Volumes/KujLab/Brianna/Projects/2022_0328_CINAR_BC/BC_Coral_Exometabolomics_Manuscript_EST/data_availability/GitHub/site_map/stsj_fin")
+nps <- st_read("/Volumes/KujLab/Brianna/Projects/2022_0328_CINAR_BC/BC_Coral_Exometabolomics_Manuscript_EST/data_availability/GitHub/site_map/NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service")
 
 # site metadata
 
-reefs <- read.table("CINAR_Habitat_Metabolomics-main/Files/site_map/CINARhabitat_reef_coords.txt", sep = "\t", header = TRUE)
+reefs <- read.table("./CINAR_Habitat_Metabolomics-main/Files/site_map/CINARhabitat_reef_coords.txt", sep = "\t", header = TRUE)
 reefs$Site <- factor(reefs$Site, levels = c("Ditliff", "Cocoloba", "Joels Shoal", "Yawzi", "Tektite"))
 usvi <- usa %>% filter(state == "United States Virgin Islands")
 
@@ -340,11 +343,11 @@ print(Figure3,
 metcomp_palette <-c("#ca0020", "#f4a582", "#92c5de","#0571b0","#033F63")
 
 # Load in datasets
-d1 <- read_csv("CINAR_Habitat_Metabolomics-main/Files/met_comp/CINAR_20230606.csv")
-d2 <- read_csv("CINAR_Habitat_Metabolomics-main/Files/met_comp/Weber2022.csv")
-d3 <- read_csv("CINAR_Habitat_Metabolomics-main/Files/met_comp/Weber2020.csv")
-d4 <- read_csv("CINAR_Habitat_Metabolomics-main/Files/met_comp/Fiore2017.csv")
-d5 <- read_csv("CINAR_Habitat_Metabolomics-main/Files/met_comp/Becker2023.csv")
+d1 <- read_csv("./CINAR_Habitat_Metabolomics-main/Files/met_comp/Garcia2023.csv")
+d2 <- read_csv("./CINAR_Habitat_Metabolomics-main/Files/met_comp/Weber2022.csv")
+d3 <- read_csv("./CINAR_Habitat_Metabolomics-main/Files/met_comp/Weber2020.csv")
+d4 <- read_csv("./CINAR_Habitat_Metabolomics-main/Files/met_comp/Fiore2017.csv")
+d5 <- read_csv("./CINAR_Habitat_Metabolomics-main/Files/met_comp/Becker2023.csv")
 
 # Extract all unique InchiKey (metabolites) from the four respective datasets (d1-d4)
 x <- as.data.frame(c(d1$`Chemical Name`,d2$`Chemical Name`,d3$`Chemical Name`,d4$`Chemical Name`,d5$`Chemical Name`))
@@ -589,7 +592,7 @@ print(Figure6)
 #Kruskal Wallis 
 rm(kw, kw_results, pwrst, pwrst_results, pwrst_sig)
 
-set.seed()
+set.seed(100)
 kw <- apply(habitat.mat,2,kruskal.test, g = habitat$bay_group)
 
 kw
@@ -712,7 +715,7 @@ FigureS2A
 # Figure S2-B. NMDS of Metabolite Data ------------------------------------------------
 dist <- vegdist(habitat.mat,dist='bray')
 
-set.seed(1)
+set.seed(100)
 nmds <-
   metaMDS(dist,
           distance = "bray",
