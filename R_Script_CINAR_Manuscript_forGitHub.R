@@ -9,37 +9,17 @@ CINARpalette=c("#88CCEE", "#CC6677", "#DDCC77", "#117733", "#332288")
 
 # Load required packages --------------------------------------------------
 
-library(tidyverse)
-library(ggpubr)
-library(data.table)
-library(vegan)
-library(ggcorrplot)
-library(RColorBrewer)
-library(lubridate)
-library(ggforce)
-library(Hmisc)
-library(reshape2)
-library(readxl)
-library(ggthemes)
-library(viridis)
-library(ggdendro)
-library(grid)
-library(FactoMineR)
-library(factoextra)
-library(rcartocolor)
-library(corrplot)
-library(stats)
-library(broom)
-library(stringr)
-library(ggpubr)
-library(cowplot)
-library(sf)
-library(here)
-library(ggspatial)
-library(ggrepel)
-library(rcartocolor)
-library(UpSetR)
+list.of.packages <- c("tidyverse","ggpubr","data.table","vegan",
+                      "ggcorrplot","RColorBrewer","lubridate","ggforce",
+                      "Hmisc","reshape2","readxl","ggthemes","viridis","ggdendro",
+                      "grid","FactoMineR","factoextra","rcartocolor","corrplot",
+                      "stats","broom","stringr","ggpubr","cowplot","sf",
+                      "here","ggspatial","ggrepel","rcartocolor","UpSetR")
 
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
+library(list.of.packages)
 
 # Load data ---------------------------------------------------------------
 
