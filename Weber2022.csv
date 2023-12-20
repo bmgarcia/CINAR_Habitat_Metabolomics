@@ -1,0 +1,35 @@
+Weber_et_al_2022,Chemical Name,InChIKey,Score,Note
+"2,3-dihydroxybenzoic acid","2,3-Dihydroxybenzoic Acid",GLDQAMYCGOIJDV-UHFFFAOYSA-N,0,manual from pubchem
+"2,3-dihydroxypropane-1-sulfonate","2,3-Dihydroxypropane-1-Sulfonate",YPFUJZAAZJXMIP-UHFFFAOYSA-M,0,manual from pubchem
+3-mercaptoproprionate,3-Mercaptopropionic acid,DKIDEFUBRARXTE-UHFFFAOYSA-N,0,manual from pubchem
+4-aminobenzoic acid,4-Aminobenzoic Acid,ALYNCZNDIQEVRV-UHFFFAOYSA-N,1,
+4-hydroxybenzoic acid,4-Hydroxybenzoic Acid,FJKROLUGYXJWQN-UHFFFAOYSA-N,1,
+5? – Methylthioadenosine,5'-Deoxy-5'-Methylthioadenosine,WUUGFSXJNOTRMR-IOSLPCCCSA-N,1,
+NAD,NAD,BAWFJGJZGIEFAR-NNYOXOHSSA-O,1,misannotated in manuscript as NADH
+adenosine,Adenosine,OIRDTQYFTABQOQ-KQYNXXCUSA-N,1,
+biotin,Biotin,YBJHBAHKTGYVGT-ZKWXMUAHSA-N,1,
+caffeine,Caffeine,RYYVLZVUVIJVGH-UHFFFAOYSA-N,1,
+chitobiose,"N,N'-Diacetylchitobiose",CDOJPCSDOXYJJF-CBTAGEKQSA-N,1,
+chitotriose,Chitotriose,WZZVUHWLNMNWLW-VFCSDQTKSA-N,0,manual from pubchem
+citric acid,Citric Acid,KRKNYBCHXYNGOX-UHFFFAOYSA-N,1,
+guanosine,Guanosine,NYHBQMYGNKIUIF-UUOKFMHZSA-N,1,
+inosine,Inosine,UGQMRVRMYYASKQ-KQYNXXCUSA-N,1,
+isoleucine,Isoleucine,AGPKZVBTJJNPAG-WHFBIAKZSA-N,1,
+glutathione,Glutathione,RWSXRVCMGQZWBV-WDSKDSINSA-N,1,
+kynurenine,Kynurenine,YGPSJZOEDVAXAB-UHFFFAOYSA-N,1,
+leucine,Leucine,ROHFNLRQFUQHCH-YFKPBYRVSA-N,1,
+tyrosine,Tyrosine,OUYCCCASQSFEME-QMMMGPOBSA-N,1,
+malic acid,Malic Acid,BJEPYKJPYRNKOW-UHFFFAOYSA-N,1,
+n-acetyl muramic acid,N-Acetylmuramate,MNLRQHMNZILYPY-MKFCKLDKSA-N,1,
+pantothenic acid,Pantothenic Acid,GHOKWGTUZJEAQD-ZETCQYMHSA-N,1,
+phenylalanine,Phenylalanine,COLNVLDHVKWLRT-QMMMGPOBSA-N,1,
+riboflavin,Riboflavin,AUNGANRZJHBGPY-SCRDCRAPSA-N,1,
+s-5'-adenosyl-L-homocysteine,S-Adenosyl Homocysteine,ZJUKTBDSGOFHSH-WFMPWKQPSA-N,0,manual from pubchem
+sodium taurocholate,Taurocholate,WBWWGRHZICKQGZ-HZAMXZRMSA-N,0,
+syringic acid,Syringic Acid,JMSVCTWVEWCHDZ-UHFFFAOYSA-N,0,manual from pubchem
+thymidine,Thymidine,IQFYYKKMVGJFEH-XLPZGREQSA-N,1,
+tryptamine,Tryptamine,APJYDQYYACXCRM-UHFFFAOYSA-N,1,
+tryptophan,Tryptophan,QIVBCDIJIAJPQS-VIFPVBQESA-N,1,
+xanthine,Xanthine,LRFVTYWOQMYALW-UHFFFAOYSA-N,1,
+xanthosine,Xanthosine,UBORTCNDUKBEOP-UUOKFMHZSA-N,1,
+indole-3-acetic acid,Indole-3-Acetic Acid,SEOVTRFCIGRIMH-UHFFFAOYSA-N,1,
