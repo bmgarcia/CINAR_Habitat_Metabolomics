@@ -7,6 +7,7 @@ Department of Marine Chemistry and Geochemistry, Woods Hole Oceanographic Instit
 
 
 All necessary code and files to regenerate figures in the manuscript are provided in this GitHub repository, excluding map data (see below).
+
 Necessary data to regenerate Figure 1 (Site Map) can be downloaded from the following sources and is not included in this GitHub repository due to size.
 
 * US National Parks <https://public-nps.opendata.arcgis.com/datasets/nps::nps-land-resources-division-boundary-and-tract-data-service/explore?layer=2&location=0.239390%2C-12.497900%2C2.00>
