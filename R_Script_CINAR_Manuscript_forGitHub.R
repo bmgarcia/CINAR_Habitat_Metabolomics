@@ -43,12 +43,12 @@ library(UpSetR)
 
 # Load data ---------------------------------------------------------------
 
-data <- read_csv("mtab_files/CINARhabitat_Quant_table.csv")
+data <- read_csv("CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINARhabitat_Quant_table.csv")
 data <- as_tibble(data,rownames="rowID_full")
 data$rep_group<-as.factor(data$rep_group)
-seq <- read_csv("mtab_files/CINAThabitat_Seq_Sheet.csv")
-limits <- read_csv("mtab_files/CINARhabitat_LODLOQ_limits.csv")
-benthic <- read.delim("mtab_files/CINARhabitat_Benthic_cover.txt", sep = "\t", header = TRUE)
+seq <- read_csv("CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINAThabitat_Seq_Sheet.csv")
+limits <- read_csv("CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINARhabitat_LODLOQ_limits.csv")
+benthic <- read.delim("CINAR_Habitat_Metabolomics-main/Files/mtab_files/CINARhabitat_Benthic_cover.txt", sep = "\t", header = TRUE)
 
 # Merge in file name ------------------------------------------------------
 
@@ -205,13 +205,13 @@ rm(kw, kw_results,pwrst,pwrst_results)
 #US Virgin Islands and Puerto Rico Habitats <https://products.coastalscience.noaa.gov/collections/benthic/e95usvi_pr/>
 #United States and Territories <https://earthworks.stanford.edu/catalog/stanford-vt021tk4894> 
   
-usa <- st_read("site_map/stanford-vt021tk4894-shapefile/","vt021tk4894")
-sttstj <- st_read("site_map/stsj_fin")
-nps <- st_read("site_map/NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service")
+usa <- st_read("CINAR_Habitat_Metabolomics-main/Files/site_map/stanford-vt021tk4894-shapefile/","vt021tk4894")
+sttstj <- st_read("CINAR_Habitat_Metabolomics-main/Files/site_map/stsj_fin")
+nps <- st_read("CINAR_Habitat_Metabolomics-main/Files/site_map/NPS_-_Land_Resources_Division_Boundary_and_Tract_Data_Service")
 
 # site metadata
 
-reefs <- read.table("site_map/CINARhabitat_reef_coords.txt", sep = "\t", header = TRUE)
+reefs <- read.table("CINAR_Habitat_Metabolomics-main/Files/site_map/CINARhabitat_reef_coords.txt", sep = "\t", header = TRUE)
 reefs$Site <- factor(reefs$Site, levels = c("Ditliff", "Cocoloba", "Joels Shoal", "Yawzi", "Tektite"))
 usvi <- usa %>% filter(state == "United States Virgin Islands")
 
@@ -340,11 +340,11 @@ print(Figure3,
 metcomp_palette <-c("#ca0020", "#f4a582", "#92c5de","#0571b0","#033F63")
 
 # Load in datasets
-d1 <- read_csv("met_comp/CINAR_20230606.csv")
-d2 <- read_csv("met_comp/Weber2022.csv")
-d3 <- read_csv("met_comp/Weber2020.csv")
-d4 <- read_csv("met_comp/Fiore2017.csv")
-d5 <- read_csv("met_comp/Becker2023.csv")
+d1 <- read_csv("CINAR_Habitat_Metabolomics-main/Files/met_comp/CINAR_20230606.csv")
+d2 <- read_csv("CINAR_Habitat_Metabolomics-main/Files/met_comp/Weber2022.csv")
+d3 <- read_csv("CINAR_Habitat_Metabolomics-main/Files/met_comp/Weber2020.csv")
+d4 <- read_csv("CINAR_Habitat_Metabolomics-main/Files/met_comp/Fiore2017.csv")
+d5 <- read_csv("CINAR_Habitat_Metabolomics-main/Files/met_comp/Becker2023.csv")
 
 # Extract all unique InchiKey (metabolites) from the four respective datasets (d1-d4)
 x <- as.data.frame(c(d1$`Chemical Name`,d2$`Chemical Name`,d3$`Chemical Name`,d4$`Chemical Name`,d5$`Chemical Name`))
